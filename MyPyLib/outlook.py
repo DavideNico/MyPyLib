@@ -33,6 +33,10 @@ emails can be sent now from different address.
 
 Added few examples at the end of the function
 
+Modified on Wed Dec 08 2020
+@contributor: nicolid
+
+multiple attachments are now possible
 
 """
 
@@ -173,7 +177,11 @@ class outlook():
         mail.Subject = subject
         mail.HTMLBody = body
         if attachments is not None:
-            mail.Attachments.Add(Source=attachments)
+            if len(attachments)>1:
+                for attachment in attachments:
+                    mail.Attachments.Add(Source=attachment)
+            else:
+                mail.Attachments.Add(Source=attachments)
         mail.Display(True)
 
 # End of OutlookApi script
