@@ -1,0 +1,99 @@
+NMOPDB=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (FAILOVER = ON)
+      (LOAD_BALANCE = ON)
+      (ADDRESS = (PROTOCOL = TCP)(HOST = xp02prd-scan.ecb.de)(PORT = 1521))
+      (ADDRESS = (PROTOCOL = TCP)(HOST = xp01prd-scan.ecb.de)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = pmopdb_svc.prd.tns)
+    )
+  )
+
+
+MOPDB=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (FAILOVER = ON)
+      (LOAD_BALANCE = ON)
+      (ADDRESS = (PROTOCOL = TCP)(HOST = xp02prd-scan.ecb.de)(PORT = 1521))
+      (ADDRESS = (PROTOCOL = TCP)(HOST = xp01prd-scan.ecb.de)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = pmopdb_svc.prd.tns)
+    )
+  )
+
+
+COLL_SHARED=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (FAILOVER = ON)
+      (LOAD_BALANCE = ON)
+      (ADDRESS = (PROTOCOL = TCP)(HOST = xp02prd-scan.ecb.de)(PORT = 1521))
+      (ADDRESS = (PROTOCOL = TCP)(HOST = xp01prd-scan.ecb.de)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = pmopdb_svc.prd.tns)
+    )
+  )
+
+SBIDW=
+  (DESCRIPTION=
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST=SBIWP03.ECB01.ECB.DE)
+      (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (SERVER=dedicated)
+      (SERVICE_NAME=sbidw.prd.tns)
+    )
+  )
+  
+SBIODS=
+  (DESCRIPTION=
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST=SBIWP02.ECB01.ECB.DE)
+      (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (SERVER=dedicated)
+      (SERVICE_NAME=sbiods.prd.tns)
+    )
+  )
+
+
+MOPDB_accept=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (FAILOVER = ON)
+      (LOAD_BALANCE = ON)
+      (ADDRESS = (PROTOCOL = TCP)(HOST = xp02acc-scan.ecb.de)(PORT = 1521))
+      (ADDRESS = (PROTOCOL = TCP)(HOST = xp01acc-scan.ecb.de)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = amopdb_svc.acc.tns)
+    )
+  )
+
+
+MOPDB_accept_EXA =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (FAILOVER = ON)
+      (LOAD_BALANCE = ON)
+      (ADDRESS = (PROTOCOL = TCP)(HOST = xp02acc-scan.ecb.de)(PORT = 1521))
+      (ADDRESS = (PROTOCOL = TCP)(HOST = xp01acc-scan.ecb.de)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = amopdb_svc.acc.tns)
+    )
+  )

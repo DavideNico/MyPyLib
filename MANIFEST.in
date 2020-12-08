@@ -1,0 +1,5 @@
+include py_dgm/docs/*
+include py_dgm/examples/*.py
+include py_dgm/tests/*.py
+include py_dgm/templates/*
+include py_dgm/*.xlsm
